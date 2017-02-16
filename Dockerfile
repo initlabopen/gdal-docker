@@ -24,7 +24,8 @@ WORKDIR /data
 VOLUME ["/data"]
 
 # Execute the gdal utilities as nobody, not root
-USER nobody
+RUN useradd -d /home/webmaster -u 1000 -s /bin/bash -p qwerty123456 webmaster
+USER webmaster
 
 # Output version and capabilities by default.
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
