@@ -21,8 +21,8 @@ WORKDIR /data
 VOLUME ["/data"]
 
 # Execute the gdal utilities as nobody, not root
-RUN useradd -d /home/cba -u 1001 -s /bin/bash -p qwerty123456 cba
-USER cba
+#RUN useradd -d /home/cba -u 1001 -s /bin/bash -p qwerty123456 cba
+#USER cba
 
 # Output version and capabilities by default.
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
