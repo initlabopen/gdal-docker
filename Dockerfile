@@ -20,5 +20,6 @@ RUN /usr/local/src/gdal-docker/build.sh
 WORKDIR /data
 VOLUME ["/data"]
 
+
 # Output version and capabilities by default.
 CMD gdalinfo --version && gdalinfo --formats && ogrinfo --formats
